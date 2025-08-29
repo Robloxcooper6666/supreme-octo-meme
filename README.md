@@ -1,1 +1,121 @@
-# supreme-octo-meme
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>蝦皮帶購 · 商品代購</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", system-ui, Arial, sans-serif;
+      background-color: #0b0b0b;
+      color: #f5f5f5;
+      text-align: center;
+    }
+    header {
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #ff914d;
+      letter-spacing: 2px;
+    }
+    .pricing {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      background: #1a1a1a;
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255,145,77,0.4);
+    }
+    .line-contact {
+      margin: 1.5rem 0;
+      font-size: 1.1rem;
+    }
+    .line-contact span {
+      color: #06c755;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
+      background: linear-gradient(90deg, #ff914d, #ff5722);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(255,145,77,0.7);
+    }
+    #formPage {
+      display: none;
+      padding: 1rem;
+    }
+    iframe {
+      margin: 20px auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,145,77,0.4);
+      max-width: 100%;
+    }
+    a.back {
+      display: inline-block;
+      margin: 20px;
+      padding: 0.6rem 1.2rem;
+      background: #444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    a.back:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- 首頁 -->
+  <div id="homePage">
+    <header>
+      <h1>蝦皮帶購 · 商品代購</h1>
+      <div class="pricing">
+        收費標準：商品費用 + 運費 × 2
+        <br>範例：200 + 40 × 2 = 200 + 80
+      </div>
+      <div class="line-contact">
+        聯絡我們 LINE 官方帳號：<span>@904fnvzo</span>
+      </div>
+      <button class="btn" onclick="showForm()">立即下單</button>
+    </header>
+  </div>
+
+  <!-- 表單頁 -->
+  <div id="formPage">
+    <h2 style="color:#ff914d;">下單表單</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScXgxIHrwoRgoII9dTL2ov6kqxxQcVslCeVZSonhTjE2vBWTg/viewform?embedded=true"
+            width="640" height="688" frameborder="0" marginheight="0" marginwidth="0">
+      載入中…
+    </iframe>
+    <br>
+    <a class="back" href="#" onclick="showHome()">⬅ 返回首頁</a>
+  </div>
+
+  <script>
+    function showForm() {
+      document.getElementById("homePage").style.display = "none";
+      document.getElementById("formPage").style.display = "block";
+    }
+    function showHome() {
+      document.getElementById("formPage").style.display = "none";
+      document.getElementById("homePage").style.display = "block";
+    }
+  </script>
+</body>
+</html>
